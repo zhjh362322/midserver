@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');  // req.body 可以访问
 var index = require('./routes/index');
 var track = require('./routes/track');
 var login = require('./routes/login');
+var quotation = require('./routes/quotation');
+var consignment = require('./routes/consignment');
 
 var app = express();
 
@@ -14,6 +16,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', index);
 app.use('/track', track);
 app.use('/login', login);
+app.use('/quotation', quotation);
+app.use('/consignment', consignment);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

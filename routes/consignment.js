@@ -4,8 +4,9 @@ var request = require('request');
 
 router.post('/', function(req, res, next) {
     var data = req.body;
+    console.log(data)
     request.post({
-        url: 'http://zgt.zwh56.com/mini/login',
+        url: 'http://zgt.zwh56.com/mini/consignment',
         method: 'POST',
         json: true,
         headers: {
