@@ -6,7 +6,9 @@ var track = require('./routes/track');
 var login = require('./routes/login');
 var quotation = require('./routes/quotation');
 var consignment = require('./routes/consignment');
-
+var shipper = require('./routes/shipper');
+var company = require('./routes/company');
+var plant = require('./routes/plant');
 var app = express();
 
 app.use(logger('dev'));
@@ -18,7 +20,9 @@ app.use('/track', track);
 app.use('/login', login);
 app.use('/quotation', quotation);
 app.use('/consignment', consignment);
-
+app.use('/shipper', shipper);
+app.use('/company', company);
+app.use('/plant', plant);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
